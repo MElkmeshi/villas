@@ -33,10 +33,7 @@
   <body>
     <script type="text/javascript">
       const pb = new PocketBase("https://aldiqa.com.ly");
-      const email = "elkmeshi2002@gmail.com";
-      const password = "1234567890";
       const main = async () => {
-        const login = await pb.admins.authWithPassword(email, password);
         const records = await pb.collection("Houses").getFullList({
           sort: "-created",
           expand: "Category",
@@ -58,7 +55,7 @@
       };
       main();
     </script>
-    <table class="table" id="table">
+    <table class="table">
       <thead>
         <tr>
           <th scope="col">Image</th>
